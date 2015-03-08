@@ -12,6 +12,9 @@ Execute JavaScript commands in a floating console window
 
 
 &gt; [CTRL] + ARROW UP    : Move window up
+
 &gt; [CTRL] + ARROW RIGHT : Move window right
+
 &gt; [CTRL] + ARROW DOWN  : Move window down
+
 &gt; [CTRL] + ARROW LEFT  : Move window left
