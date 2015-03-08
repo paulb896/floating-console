@@ -8,6 +8,12 @@
   opacity:1;
 }
 
+.floating-console_last-command{
+  max-height: 200px;
+  overflow-y:scroll;
+  overflow-x:hidden;
+}
+
 .floating-console_command{
   font-size:50px;
   padding: 2px 50px 15px 100px;

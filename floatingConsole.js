@@ -28,7 +28,18 @@ var floatingConsole = floatingConsole || {
     }
 
     try {
-      floatingConsole.lastCommand.innerHTML = window.eval(command);
+      var evaluatedCommand = window.eval(command);
+      floatingConsole.lastCommand.innerHTML = evaluatedCommand;
+      if (typeof evaluatedCommand == 'object') {
+        var objectInfo = '';
+        for (var name in evaluatedCommand) {
+          if (evaluatedCommand.hasOwnProperty(name)) {
+            objectInfo +=
+              name + " : " + evaluatedCommand[name] + "[" + (typeof evaluatedCommand[name]) + "] <br>";
+          }
+        }
+        floatingConsole.lastCommand.innerHTML = objectInfo;
+      }
     } catch (e) {
       floatingConsole.lastCommand.innerHTML = e.message;
     }
