@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en-CA" ng-app="exampleApp">
+<head>
+  <meta charset="utf-8" />
+  <title>Floating JavaScript Console</title>
+  <meta name="description" content="Floating JavaScript console" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link href="floating-console.css" rel="stylesheet" type="text/css" media="all" />
+</head>
+<body style="padding-left:200px; padding-top: 10px;">
+  <header style="margin-bottom:30px; margin-right:100px; float:right">
+    <h1 style="font-weight:100">Floating Console</h1>
+    <a style="text-decoration:none" href="https://github.com/paulb896/floating-console">Source on GitHub</a>
+  </header>
+  <div class="floating-console">
+    <ul class="floating-console_previous-commands">
+      <li class="floating-console_last-command"></li>
+    </ul>
+    <input
+      class="floating-console_command"
+      placeholder="Command + [Enter] to Execute"
+      type="text"/>
+  </div>
+  <pre style="margin-top: 300px;"><code>
+    &lt;link href="css/floating-console.css" rel="stylesheet" type="text/css" media="all" /&gt;
+
+    &lt;script src="floatingConsole.js"&gt;&lt;/script&gt;
+    &lt;script&gt;
+      floatingConsole.initialize();
+    &lt;/script&gt;
+
+
+    &gt; [CTRL] + ARROW UP    : Move window up
+    &gt; [CTRL] + ARROW RIGHT : Move window right
+    &gt; [CTRL] + ARROW DOWN  : Move window down
+    &gt; [CTRL] + ARROW LEFT  : Move window left
+  </code></pre>
+  <script src="floatingConsole.js"></script>
+  <script>
+    floatingConsole.initialize();
+  </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+.floating-console{
+  outline:2px solid #000;
+  width:950px;
+  position:absolute;
+  opacity: 0.1;
+}
+.floating-console:hover{
+  opacity:1;
+}
+
+.floating-console_command{
+  font-size:50px;
+  padding: 2px 50px 15px 100px;
+  width:800px;
+  height:100px;
+  border:none;
+  background-color:#fafbfc;
+  color:black;
+  font-style:monospace;
+}
+.floating-console_command:focus{
+  outline:0;
+}
+.floating-console_previous-commands{
+  margin:0;
+  list-style-type: none;
+  font-size:50px;
+  padding: 15px 50px 30px 100px;
+  width:800px;
+  background-color:#fafbfc;
+  color:black;
+  font-style:monospace;
+}
