@@ -48,7 +48,7 @@ var floatingConsole = floatingConsole || {
     floatingConsole.cursorPosition = 0;
   },
   moveContainer: function(x, y) {
-    var containerPosition = getPosition(floatingConsole.container);
+    var containerPosition = floatingConsole.getPosition(floatingConsole.container);
     if (typeof x !== undefined) {
       floatingConsole.container.style.left =
         (containerPosition.x - x) + "px";
@@ -85,16 +85,16 @@ var floatingConsole = floatingConsole || {
       if (e.ctrlKey) {
         switch(e.which) {
           case 37: // control left, move window left
-            floatingConsole.moveContainer(-floatingConsole.transAmount);
-            break;
-          case 38: // control up, move window up
-            floatingConsole.moveContainer(0, -floatingConsole.transAmount);
-            break;
-          case 39: // control right, move window right
             floatingConsole.moveContainer(floatingConsole.transAmount);
             break;
-          case 40: // control down, move window down
+          case 38: // control up, move window up
             floatingConsole.moveContainer(0, floatingConsole.transAmount);
+            break;
+          case 39: // control right, move window right
+            floatingConsole.moveContainer(-floatingConsole.transAmount);
+            break;
+          case 40: // control down, move window down
+            floatingConsole.moveContainer(0, -floatingConsole.transAmount);
             break;
         }
       } else if (e.keyCode === 13) { // enter key
